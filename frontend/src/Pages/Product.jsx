@@ -7,17 +7,61 @@ import DescriptionBox from '../Components/DescriptionBox/DescriptionBox';
 import RelatedProducts from '../Components/RelatedProducts/RelatedProducts';
 
 const Product = () => {
-  const {all_product} = useContext(ShopContext);
-  const {productId} = useParams();
-  const product = all_product.find((e)=> e.id === Number(productId));
+  const { all_product } = useContext(ShopContext);
+  const { productId } = useParams();
+
+  if (!all_product) {
+    return <div>Loading...</div>;
+  }
+
+  const product = all_product.find((e) => e.id === Number(productId));
+
+  if (!product) {
+    return <div>Product not found.</div>;
+  }
+
   return (
     <div>
       <Breadcrum product={product} />
-      <ProductDisplay product={product}/>
-      <DescriptionBox/>
+      <ProductDisplay product={product} />
+      <DescriptionBox />
       <RelatedProducts />
     </div>
-  )
-}
+  );
+};
+
+// const Product = () => {
+//   const { all_product } = useContext(ShopContext);
+//   const { productId } = useParams();
+//   const product = all_product.find((e) => e.id === Number(productId));
+
+//   // If product is not found, return an error message or redirect
+//   if (!product) {
+//     return <div>Product not found.</div>;
+//   }
+
+//   return (
+//     <div>
+//       <Breadcrum product={product} />
+//       <ProductDisplay product={product} />
+//       <DescriptionBox />
+//       <RelatedProducts />
+//     </div>
+//   );
+// };
+
+// const Product = () => {
+//   const {all_product} = useContext(ShopContext);
+//   const {productId} = useParams();
+//   const product = all_product.find((e)=> e.id === Number(productId));
+//   return (
+//     <div>
+//       <Breadcrum product={product} />
+//       <ProductDisplay product={product}/>
+//       <DescriptionBox/>
+//       <RelatedProducts />
+//     </div>
+//   )
+// }
 
 export default Product
