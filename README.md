@@ -7,7 +7,7 @@
 
 ## 📌 Overview
 
-**TrendMart W** is a feature-rich retail web application built using the **MERN stack** – MongoDB, Express.js, React.js, and Node.js. Designed for modern online shopping, it supports real-time product updates, secure authentication, and a responsive, mobile-friendly interface.
+**TrendMart** is a feature-rich retail web application built using the **MERN stack** – MongoDB, Express.js, React.js, and Node.js. Designed for modern online shopping, it supports real-time product updates, secure authentication, and a responsive, mobile-friendly interface.
 
 The platform enables both customers and administrators to interact with the system efficiently. Shoppers can explore products, manage their carts, and proceed to checkout. Meanwhile, admins can manage the product catalog via a dedicated dashboard.
 
